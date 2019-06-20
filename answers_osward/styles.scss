@@ -1,0 +1,208 @@
+@import url(/vasilis/vasilis.css);
+
+@mixin mediaBox($sizeMedia) {
+    height: $heightMedia;
+    width: $widthMedia;
+}
+
+
+
+/** MY CODE **/
+$oceanColor: blue;
+$colorCute: Hotpink;
+$colorTomato: tomato;
+$heightMedia: 300px;
+$widthMedia: 600px;
+$sizeMedia: $heightMedia * $widthMedia;
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large-desktop: 1400px;
+$colorSubheading: orange;
+
+
+
+
+
+
+ header {
+     h1 {
+        position: fixed;
+        text-align: center;
+     }
+ }
+
+main {
+    ol {
+        .firstList {
+            color: $oceanColor;
+        }
+    }
+}
+
+.images {
+
+    .background {
+        width: 300px;
+        height: 150px;
+        background: url(/images/tree.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;        
+        background-position: center center;
+        display: inline-block;
+    }
+
+    img {
+        &[alt = "Image 2"] {
+            padding: 2%;
+            border: 5px solid blue;
+        }
+    }
+}
+
+
+div {
+
+        span {
+
+            &:nth-child(even) {
+                background: $colorTomato;
+            }
+
+            &:nth-child(odd) {
+                background: $colorCute;
+            }
+       }
+}
+
+.mediaquery {
+    background-color: $colorCute;
+    @include mediaBox($sizeMedia);
+
+    @media (min-width: $breakpoint-mobile) {
+        background-color: blue;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        background-color:yellow;
+        height: 7rem;
+        width: 7rem;
+    }
+    
+    @media (min-width: $breakpoint-desktop) {
+        background-color: red;
+        height: 10rem;
+        width: 10rem;
+    }
+
+    @media (min-width: $breakpoint-large-desktop) {
+        background-color: purple;
+        height: 12rem;
+        width: 12rem;
+    }
+}
+
+
+
+
+.box {
+    .relative {
+        position: relative;
+        left: 49%;
+
+        .absolute {
+            position: absolute;
+            top: 48%;
+            right: 48%;
+            
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    border: 8px solid tomato;
+    grid-gap: 5px;
+    height: 572px;
+    margin: 2rem;
+
+    .cell {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        padding: 4rem;
+        border: 2px solid grey;         
+    }
+
+    .one {
+        background: deepskyblue;
+    }
+    .two {
+        background: orangered;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        
+    }  
+    .three {
+        background: royalblue;        
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end:3;
+    }  
+    .four {
+        background: gold;
+    }  
+      .five {
+        background: blueviolet;
+    }
+      .six {
+        background: limegreen;
+    }
+      .seven {
+        background: coral;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+      
+    
+     
+}
+
+
+.heading-sub {
+    color: $colorSubheading;
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+footer {
+    ul {
+        li {
+            a{
+                text-decoration: none;
+                color: green;
+                    &:visited {
+                        color: green;
+                    }
+
+                    &:hover {
+                        color: orangered;
+                }
+            }
+        }
+    }
+}

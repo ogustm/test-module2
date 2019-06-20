@@ -1,0 +1,117 @@
+@import url(/vasilis/vasilis.css);
+/** MY CODE **/
+header h1 {
+  position: fixed;
+  text-align: center; }
+
+main ol .firstList {
+  color: blue; }
+
+.images .background {
+  width: 300px;
+  height: 150px;
+  background: url(/images/tree.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block; }
+
+.images img[alt="Image 2"] {
+  padding: 2%;
+  border: 5px solid blue; }
+
+div span:nth-child(even) {
+  background: tomato; }
+
+div span:nth-child(odd) {
+  background: Hotpink; }
+
+.mediaquery {
+  background-color: Hotpink;
+  height: 300px;
+  width: 600px; }
+  @media (min-width: 320px) {
+    .mediaquery {
+      background-color: blue;
+      height: 5rem;
+      width: 5rem; } }
+  @media (min-width: 768px) {
+    .mediaquery {
+      background-color: yellow;
+      height: 7rem;
+      width: 7rem; } }
+  @media (min-width: 1024px) {
+    .mediaquery {
+      background-color: red;
+      height: 10rem;
+      width: 10rem; } }
+  @media (min-width: 1400px) {
+    .mediaquery {
+      background-color: purple;
+      height: 12rem;
+      width: 12rem; } }
+
+.box .relative {
+  position: relative;
+  left: 49%; }
+  .box .relative .absolute {
+    position: absolute;
+    top: 48%;
+    right: 48%; }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  border: 8px solid tomato;
+  grid-gap: 5px;
+  height: 572px;
+  margin: 2rem; }
+  .wrapper .cell {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    padding: 4rem;
+    border: 2px solid grey; }
+  .wrapper .one {
+    background: deepskyblue; }
+  .wrapper .two {
+    background: orangered;
+    grid-row-start: 2;
+    grid-row-end: 4; }
+  .wrapper .three {
+    background: royalblue;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; }
+  .wrapper .four {
+    background: gold; }
+  .wrapper .five {
+    background: blueviolet; }
+  .wrapper .six {
+    background: limegreen; }
+  .wrapper .seven {
+    background: coral;
+    grid-column-start: 2;
+    grid-column-end: 4; }
+
+.heading-sub {
+  color: orange;
+  font-size: 2.5rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+
+footer ul li a {
+  text-decoration: none;
+  color: green; }
+  footer ul li a:visited {
+    color: green; }
+  footer ul li a:hover {
+    color: orangered; }
